@@ -1,2 +1,10 @@
-# habit-tracker
-A responsive monthly habit tracker with visual cactus growth, streak tracking, and a productivity graph. Designed for clarity, consistency, and daily motivation, with automatic data saving.
+# Habit Tracker 🌵
+
+A responsive habit tracker with daily cactus growth,
+productivity graph, and localStorage persistence.
+
+## Features
+- Daily cactus growth
+- Habit streak tracking
+- Monthly productivity graph
+- Mobile responsive
