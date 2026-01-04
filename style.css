@@ -1,0 +1,225 @@
+:root{
+  --pink:#fde2e4;
+  --green:#e2f0cb;
+  --blue:#cfe2ff;
+  --purple:#e4d8f5;
+  --teal:#d1f2eb;
+}
+
+body{
+  font-family: Inter, system-ui, sans-serif;
+  background:#f6f7fb;
+  padding:20px;
+  color:#333;
+}
+
+.title{
+  text-align:center;
+  font-size:42px;
+  margin-bottom:20px;
+}
+
+.top{
+  display:grid;
+  grid-template-columns:1fr 2fr 1fr;
+  gap:16px;
+}
+
+.card{
+  background:white;
+  border-radius:16px;
+  padding:16px;
+  box-shadow:0 10px 30px rgba(0,0,0,.06);
+}
+
+.selectors{
+  display:flex;
+  gap:10px;
+}
+
+.habit-add{
+  display:flex;
+  gap:8px;
+  margin-top:12px;
+}
+
+input,select,button{
+  padding:10px;
+  border-radius:10px;
+  border:none;
+  font-weight:600;
+}
+
+button{
+  background:#6aa84f;
+  color:white;
+  cursor:pointer;
+}
+
+.graph-card canvas{
+  width:100%;
+  height:260px;
+}
+
+.grow-card{
+  text-align:center;
+}
+
+.grow-card img{
+  width:90px;
+}
+
+/* TABLE */
+table{
+  width:100%;
+  border-collapse:separate;
+  border-spacing:0;
+  background:white;
+  border-radius:16px;
+  overflow:hidden;
+  box-shadow:0 10px 30px rgba(0,0,0,.06);
+  margin-top:12px;
+}
+
+th,td{
+  padding:6px;
+  text-align:center;
+  font-size:12px;
+}
+
+th.habit{
+  background:var(--pink);
+  font-size:14px;
+}
+
+th.cactus img{
+  width:36px; /* bigger cactus */
+  display:block;
+  margin:auto;
+}
+
+th.weekday{
+  font-size:11px;
+  color:#666;
+}
+
+.week1{background:var(--pink)}
+.week2{background:var(--green)}
+.week3{background:var(--blue)}
+.week4{background:var(--purple)}
+.week5{background:var(--teal)}
+
+input[type=checkbox]{
+  width:16px;
+  height:16px;
+  accent-color:#6aa84f;
+}
+
+.remove{
+  color:red;
+  font-weight:bold;
+  cursor:pointer;
+  margin-left:6px;
+}
+
+/* MOBILE */
+@media(max-width:900px){
+  .top{grid-template-columns:1fr}
+  table{display:block;overflow-x:auto}
+}
+
+
+
+
+/* ============================= */
+/* 📱 MOBILE RESPONSIVE FIXES */
+/* ============================= */
+
+@media (max-width: 1024px) {
+  .top {
+    grid-template-columns: 1fr;
+  }
+
+  .graph-card canvas {
+    height: 220px;
+  }
+}
+
+@media (max-width: 768px) {
+
+  body {
+    padding: 12px;
+  }
+
+  .title {
+    font-size: 28px;
+  }
+
+  .habit-add {
+    flex-direction: column;
+  }
+
+  .habit-add input,
+  .habit-add button {
+    width: 100%;
+  }
+
+  /* TABLE SCROLL (IMPORTANT) */
+  table {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+
+  th, td {
+    min-width: 32px;
+    font-size: 11px;
+  }
+
+  th.habit {
+    min-width: 160px;
+    position: sticky;
+    left: 0;
+    z-index: 3;
+  }
+
+  td:first-child {
+    position: sticky;
+    left: 0;
+    background: white;
+    z-index: 2;
+  }
+
+  th.cactus img {
+    width: 30px;
+  }
+
+  .grow-card img {
+    width: 70px;
+  }
+
+  .graph-card canvas {
+    height: 200px;
+  }
+}
+
+@media (max-width: 480px) {
+
+  .title {
+    font-size: 24px;
+  }
+
+  th.habit {
+    min-width: 140px;
+    font-size: 12px;
+  }
+
+  th.cactus img {
+    width: 26px;
+  }
+
+  input[type=checkbox] {
+    width: 14px;
+    height: 14px;
+  }
+}
